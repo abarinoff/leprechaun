@@ -9,6 +9,10 @@ module.exports = {
         filename: 'bundle.js'
     },
 
+    resolve: {
+        modules: [path.resolve(__dirname, 'src/front-end'), 'node_modules']
+    },
+
     module: {
         rules: [
             {

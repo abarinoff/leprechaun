@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ExpenseInput from '../ExpenseInput';
+import ExpenseInput from 'tracker/ExpenseInput';
 
 import './TrackerView.scss'
 
