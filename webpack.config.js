@@ -33,6 +33,7 @@ module.exports = {
 
     devServer: {
         contentBase: './src/front-end',
-        publicPath: '/'
+        publicPath: '/',
+        historyApiFallback: true
     }
 };
