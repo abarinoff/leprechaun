@@ -1,14 +1,14 @@
 import { createAction, createReducer } from 'redux-act';
 
-export const createExpense = createAction('CREATE_EXPENSE', (expense) => ({expense}));
+export const addExpense = createAction('ADD_EXPENSE', (expense) => ({expense}));
 
-function handleCreateExpense(state, payload) {
+function handleAddExpense(state, payload) {
     return [
-        payload,
+        payload.expense,
         ...state
     ];
 }
 
 export default createReducer({
-    [createExpense]: handleCreateExpense
+    [addExpense]: handleAddExpense
 }, [{product: 'Apple', spent: 10}, {product: 'Orange', spent: 5}]);

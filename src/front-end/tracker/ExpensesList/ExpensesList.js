@@ -12,7 +12,7 @@ export default class ExpensesList extends Component {
                         this.props.expenses.map((expense) => {
                             return (
                                 <ol key={expense.product + expense.spent}>
-                                    {expense.spent}
+                                    {expense.product + ' - ' + expense.spent}
                                 </ol>
                             );
                         })

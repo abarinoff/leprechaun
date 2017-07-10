@@ -1,3 +1,3 @@
-import ExpenseInput from './ExpenseInput';
+import ExpenseInputContainer from './ExpenseInputContainer';
 
-export default ExpenseInput;
+export default ExpenseInputContainer;
