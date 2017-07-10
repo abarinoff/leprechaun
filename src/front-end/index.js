@@ -1,27 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 
+import initStore from 'store';
 import TrackerView from 'tracker/TrackerView';
 
 import './index.scss';
 
-const initialState = {
-    expenses: [
-        {
-            product: 'Apple',
-            spent: 10,
-        },
-        {
-            product: 'Orange',
-            spent: 5
-        }
-    ]
-};
-
-let store = createStore((state = initialState) => state);
+const store = initStore();
 
 ReactDOM.render(
     <Provider store={store}>
