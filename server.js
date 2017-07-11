@@ -11,10 +11,9 @@ app.get('/', (request, response) => {
     response.sendFile(__dirname + '/src/front-end/index.html');
 });
 
-
 MongoClient.connect('mongodb://localhost/leprechaun', (err, database) => {
 
-    app.get('/expenses', (request, response) => {
+    app.get('/api/expenses', (request, response) => {
         database.collection('expenses').find().toArray(function(err, result) {
             if (err) return console.log(err)
 
@@ -22,7 +21,7 @@ MongoClient.connect('mongodb://localhost/leprechaun', (err, database) => {
         })
     });
 
-    app.post('/expenses', (request, response) => {
+    app.post('/api/expenses', (request, response) => {
         database.collection('expenses').save(request.body, (err, result) => {
             if (err) return console.log(err)
 
@@ -30,7 +29,7 @@ MongoClient.connect('mongodb://localhost/leprechaun', (err, database) => {
         });
     });
 
-    app.listen(3000, function() {
-        console.log('listening on 3000')
+    app.listen(8080, function() {
+        console.log('listening on 8080')
     });
 });

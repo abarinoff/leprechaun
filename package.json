@@ -31,6 +31,8 @@
   },
   "scripts": {
     "build": "webpack -p",
-    "dev": "nodemon server.js"
+    "start": "./start 'nodemon server.js' 'webpack-dev-server --hot --inline'",
+    "dev-server": "nodemon server.js",
+    "dev-client": "webpack-dev-server --hot --inline"
   }
 }

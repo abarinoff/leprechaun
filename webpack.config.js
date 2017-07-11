@@ -34,6 +34,16 @@ module.exports = {
     devServer: {
         contentBase: './src/front-end',
         publicPath: '/',
-        historyApiFallback: true
+        historyApiFallback: true,
+
+        host: 'localhost',
+        port: 3000,
+
+        proxy: {
+            '/api': {
+                target: 'http://localhost:8080',
+                secure: false
+            }
+        }
     }
 };
