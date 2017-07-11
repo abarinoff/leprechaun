@@ -11,7 +11,7 @@ export default class ExpensesList extends Component {
                     {
                         this.props.expenses.map((expense) => {
                             return (
-                                <ol key={expense.product + expense.spent}>
+                                <ol key={expense._id}>
                                     {expense.product + ' - ' + expense.spent}
                                 </ol>
                             );
