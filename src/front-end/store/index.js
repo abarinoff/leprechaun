@@ -1,4 +1,5 @@
-import {createStore, combineReducers} from "redux";
+import {createStore, combineReducers, applyMiddleware} from "redux";
+import thunk from 'redux-thunk';
 
 import expenses from 'store/expenses';
 
@@ -7,7 +8,7 @@ const initStore = () => {
         expenses
     });
 
-    return createStore(reducers);
+    return createStore(reducers, applyMiddleware(thunk));
 };
 
 export default initStore;

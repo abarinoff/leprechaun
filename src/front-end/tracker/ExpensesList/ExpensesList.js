@@ -4,6 +4,10 @@ import './ExpensesList.scss'
 
 export default class ExpensesList extends Component {
 
+    componentDidMount() {
+        this.props.fetchExpenses();
+    }
+
     render() {
         return (
             <div className="ExpensesList">
